@@ -19,13 +19,72 @@ def met_kocke(kocke_strani):
 
 # Definirana glavna funkcija, ki prejme seznam željenih kock preko vnosa uporabnika, in preko definiranih funkcij vrne generiran naključni met za vse vnešene kocke.
 def main():
-    vnos_uporabnika = input("Opiši mi, koliko strani imajo tvoje kocke, in pričaral ti bom naključen met teh kock (Primer: Vnesi '4' za kocko D4. Vnesi več števil za več kock): ")
-    kocke = [int(x) for x in vnos_uporabnika.split()]
+    uporabnik_vnos = input("Opiši mi, koliko strani imajo tvoje kocke, in pričaral ti bom naključen met teh kock (Primer: Vnesi '4' za kocko D4. Vnesi več števil za več kock): ")
+    kocke = [int(x) for x in uporabnik_vnos.split()]
+
     kocke_strani = strani(kocke)
-    kocke_meti = met_kocke(kocke_strani)
-    
-    for i in range(len(kocke)):
-        print(f"Rezultat meta s kocko D{kocke[i]} je {kocke_meti[i]}")
+
+    # Dodajanje (indentiranega) 'while-loop'-a, ki bo spraševal po novem metu z obstoječimi kockami
+    while True:
+        kocke_meti = met_kocke(kocke_strani)
+        
+        print("---------------------------------------")
+        print("---------------- MEČEM ----------------")
+
+        for i in range(len(kocke)):
+            print("---------------------------------------")
+            print(f"Rezultat meta s kocko > D{kocke[i]} < je", "[", f"{kocke_meti[i]}", "]")
+        
+        print("---------------------------------------")     
+
+        # Nov indentiran 'while-loop', ki preverja uporabnikovo željo po ponovnem metu
+        while True:
+            uporabnik_odgovor = input("Ali želiš, da ponovim met? (da/ne): ").strip().lower()
+            
+            response_neg = ['ne', 'no', 'n', 'nej', 'nje', 'nopanjeno']
+            response_pos = ['da', 'yes', 'y', 'ye', 'dej', 'vrži']
+
+            if uporabnik_odgovor in response_neg:
+                print("Veliko sreče! Vedno sem ti na voljo, ko ti zmanjka naključnosti.")
+                exit()  # Končanje programa
+            
+            elif uporabnik_odgovor in response_pos:
+                print("Ponavljam met:")
+                break  # Izhod iz notranjega 'while-loop'-a, ki vodi v tunanji 'while-loop' - ponoven met 
+
+            else:
+                print("Nisem te razumel. Prosim odgovori z da ali ne.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        '''reroll_poziv = input("Ali želiš, da ponovim met? (da/ne): ").strip().lower()
+
+        response_neg = ['ne', 'no', 'n', 'nej', 'nje', 'nopanjeno']
+        response_pos = ['da', 'yes', 'y', 'ye', 'dej', 'vrži']
+
+        if reroll_poziv in response_neg:
+            print("Veliko sreče! Vedno sem ti na voljo, ko ti zmanjka naključnosti.")
+            break
+        elif reroll_poziv in response_pos:
+            print("Ponavljam met:")
+            continue
+        else:
+            print("Nisem razumel. Prosim odgovori z da/ne, če ponovim met z obstoječimi kockami.")
+            continue'''
+            
+
 
 # Zagon glavne funkcije
-main()
+if __name__ == "__main__":
+    main()
