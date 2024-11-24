@@ -1,56 +1,25 @@
 import random
 
-kocke = [6, 10, 20]
-kocke_strani = []
-kocke_met = []
-    
-
-def strani():
+def strani(kocke):
+    kocke_strani = []
     for x in kocke:
-        kocke_strani.append(list(range(1,x+1)))
+        kocke_strani.append(list(range(1, x + 1)))
+    return kocke_strani
 
-def met_kocke():
-    rezultat_meta = 0
+def met_kocke(kocke_strani):
+    kocke_meti = []
     for seznam_strani in kocke_strani:
-        kocke_met.append(random.choice(seznam_strani))
-            
-
+        kocke_meti.append(random.choice(seznam_strani))
+    return kocke_meti
 
 
 def main():
+    kocke = [6, 10, 20]
+    kocke_strani = strani(kocke)
+    kocke_meti = met_kocke(kocke_strani)
     
-    strani()
-    met_kocke()
-    print(kocke_met)
+    for i in range(len(kocke)):
+        print(f"Rezultat meta za D{kocke[i]} je {kocke_meti[i]}")
 
 
 main()
-
-
-
-'''
-
-
-
-
-
-
-
-
-
-kocke_strani.append
-
-
-print("--------------------")
-print("NEW DICE THROW")
-print("--------------------")
-print(f"The D4 landed on {kocka_d4}")
-print(f"The D6 landed on {kocka_d6}")
-print(f"The D8 landed on {kocka_d8}")
-print(f"The D10 landed on {kocka_d10}")
-print(f"The D12 landed on {kocka_d12}")
-print(f"The D20 landed on {kocka_d20}")
-print("--------------------")
-
-
-'''
