@@ -1,26 +1,21 @@
-__/\\\\\\\\\\\\________________________________________/\\\______________/\\\__________________________________________________________/\\\__        
- _\/\\\////////\\\_____________________________________\/\\\_____________\/\\\_________________________________________________________\/\\\__       
-  _\/\\\______\//\\\__/\\\______________________________\/\\\_____________\/\\\__/\\\___________________________________________________\/\\\__      
-   _\/\\\_______\/\\\_\///______/\\\\\\\\_____/\\\\\\\\__\//\\\____/\\\____/\\\__\///___/\\\\\\\\\\\__/\\\\\\\\\_____/\\/\\\\\\\_________\/\\\__     
-    _\/\\\_______\/\\\__/\\\___/\\\//////____/\\\/////\\\__\//\\\__/\\\\\__/\\\____/\\\_\///////\\\/__\////////\\\___\/\\\/////\\\___/\\\\\\\\\__    
-     _\/\\\_______\/\\\_\/\\\__/\\\__________/\\\\\\\\\\\____\//\\\/\\\/\\\/\\\____\/\\\______/\\\/______/\\\\\\\\\\__\/\\\___\///___/\\\////\\\__   
-      _\/\\\_______/\\\__\/\\\_\//\\\________\//\\///////______\//\\\\\\//\\\\\_____\/\\\____/\\\/_______/\\\/////\\\__\/\\\_________\/\\\__\/\\\__  
-       _\/\\\\\\\\\\\\/___\/\\\__\///\\\\\\\\__\//\\\\\\\\\\_____\//\\\__\//\\\______\/\\\__/\\\\\\\\\\\_\//\\\\\\\\/\\_\/\\\_________\//\\\\\\\/\\_ 
-        _\////////////_____\///_____\////////____\//////////_______\///____\///_______\///__\///////////___\////////\//__\///___________\///////\//__
+# [--- DICE - WIZARD ---]
 
+Prijatelj v kockarski stiski!<br> 
+Program sprejme eno ali več števil, jih "pretvori" v virtualne kocke in opravi met.<br>
+Uporabnik dobi rezultat meta 'pravičnih' kock (tipična naključnost), ki jih je definiral programu.
 
-                    Prijatelj v kockarski stiski!
+## Funkcije
 
-                    Funkcionalnosti:
-                    -Metanje 'poštenih' kock s poljubnim številom strani.
-                    -Možnost hkratnega metanja večih kock.
-                    -Možnost neprekinjenega metanja izbranih kock, dokler se uporabnik ne odloči za izhod.
+* Metanje 'poštenih' kock s poljubnim številom strani.
+* Možnost hkratnega metanja večih kock.
+* Možnost neprekinjenega metanja izbranih kock, dokler se uporabnik ne odloči za izhod.
 
-                    __Zaženi program in sledi navodilom__
+## Uporaba
 
+Zaženi program in sledi navodilom.
 
+## Info
 
-                    INFO:
-
-                    File: "d_wizard.py"      -    Koda s komentarji
-                    File: "d_wizard_v1.py"   -    Koda brez komentarjev
++ File: "d_wizard.py"                 -    Koda s komentarji
++ File: "d_wizard_v1.py"              -    Koda brez komentarjev
++ File: "dice_wizard_exec_DEMO.png    -    Slika z demonstracijo delovanja programa
