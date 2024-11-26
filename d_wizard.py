@@ -25,13 +25,17 @@ def main():
         uporabnik_vnos = input("Opiši mi, koliko strani imajo tvoje kocke, in pričaral ti bom naključen met teh kock (Primer: Vnesi '4' za kocko D4. Vnesi več števil za več kock): ")
         try:
             kocke = [int(x) for x in uporabnik_vnos.split()] # Before-change: Kocke so bile vnešene ročno, kot seznam (npr. [4, 6, 20])
-            break
+            # Zajem vnosa negativnih števil (in ničle) za vse elemente v 'kocke'
+            if all(x > 0 for x in kocke):
+                break
+            else:
+                print('Tvoj vnos je napačen. Prosim, drži se navodil: sprejemam samo pozitivna števila ločena s presledkom.')
         except ValueError:
             print("Vnašaj samo številke, ločene s presledki....prosim. Torej: ")
 
     kocke_strani = strani(kocke)
 
-    # Dodajanje 'while-loop'-a, ki bo preko definiranih funkcij povzel rezultat meta
+    # Dodajanje 'while-loop'-a, ki bo preko definiranih funkcij izrazil rezultat meta
     while True:
         kocke_meti = met_kocke(kocke_strani)
         

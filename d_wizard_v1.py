@@ -17,7 +17,10 @@ def main():
         uporabnik_vnos = input("Opiši mi, koliko strani imajo tvoje kocke, in pričaral ti bom naključen met teh kock (Primer: Vnesi '4' za kocko D4. Vnesi več števil za več kock): ")
         try:
             kocke = [int(x) for x in uporabnik_vnos.split()]
-            break
+            if all(x > 0 for x in kocke):
+                break
+            else:
+                print('Tvoj vnos je napačen. Prosim, drži se navodil: sprejemam samo pozitivna števila ločena s presledkom.')
         except ValueError:
             print("Vnašaj samo številke, ločene s presledki....prosim. Torej: ")
 

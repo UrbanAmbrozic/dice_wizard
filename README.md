@@ -1,6 +1,9 @@
 # [--- DICE - WIZARD ---]
 
-Prijatelj v kockarski stiski!<br> 
+Ali so ti padle kocke pod omaro? Ali po nekem bizarnem naključju potrebuješ kocko z 5555 stranmi?!<br>
+<br>
+Tukaj je tvoj prijatelj v kockarski stiski!<br>
+<br>
 Program sprejme eno ali več števil, jih "pretvori" v virtualne kocke in opravi met.<br>
 Uporabnik dobi rezultat meta 'pravičnih' kock (tipična naključnost), ki jih je definiral programu.
 
